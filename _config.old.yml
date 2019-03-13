@@ -15,11 +15,11 @@ theme                  : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "contrast" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "RedRain Blog"
 title_separator          : "-"
 name                     : "Justin Kim"
-description              : "RedRain's personal blog site"
+description              : "An amazing website."
 url                      : "https://redrainkim.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -64,10 +64,8 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-
+search                   : # true, false (default)
+search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -113,15 +111,6 @@ author:
   bio              : "평범한 직장인의 천천히 가는 블로그"
   location         : "Vietnam"
   email            : "kim.redrain@gmail.com"
-  facebook         : "kim.redrain"
-  github           : "RedRainKim"
-  instagram        : "kim_redrain"
-  stackoverflow    : 
-  linkedin         :
-  pinterest        :
-  steam            :
-  twitter          :
-  youtube          :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
