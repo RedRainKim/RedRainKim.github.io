@@ -12,7 +12,7 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -98,17 +98,17 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-136155488-1"
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "redrain(赤雨)"
+  name             : "Redrain(赤雨)<br>Justin Kim - 재하아빠"
   avatar           : "/assets/img/avatar_01.png" 
-  bio              : "평범한 직장인의 천천히 가는 블로그."
+  bio              : "평범한 직장인의 천천히 가는 블로그"
   location         : "Vietnam"
   email            : "kim.redrain@gmail.com"
   links:
