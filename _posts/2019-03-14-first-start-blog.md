@@ -6,6 +6,7 @@ categories:
   - Personal  
 tags:
   - blog
+last_modified_at: 2019-03-14T15:02:19-04:00
 ---
 
 부제: 기억력 감퇴로 인한 기록생활의 시작
