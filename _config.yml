@@ -12,10 +12,10 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "RedRain Blog"
 title_separator          : "-"
 name                     : "Justin Kim"
@@ -37,7 +37,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 10 # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
@@ -111,7 +111,7 @@ author:
   name             : "Redrain(赤雨)<br>Justin Kim - 재하아빠"
   avatar           : "/assets/img/avatar_01.png" 
   bio              : "평범한 직장인의 천천히 가는 블로그"
-  location         : "Vietnam"
+  location         : "Baria-Vungtau, VN"
   email            : "kim.redrain@gmail.com"
   facebook         : "kim.redrain"
   github           : "RedRainKim"
@@ -300,8 +300,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
+      classes: wide
+      read_time: false
+      comments: true
       share: true
       related: true
   # _pages
@@ -310,4 +311,5 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: ture
+      author_profile: true
+      classes: wide
