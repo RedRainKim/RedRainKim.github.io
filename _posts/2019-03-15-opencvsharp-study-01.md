@@ -30,15 +30,16 @@ OpenCV가 작년 말(2018-12-22) Version 4.0이 릴리즈 되었네요.
 OepnCV 관련 사이트는 아래와 같습니다.
 
 {% capture notice-2 %}
-* **OpenCV 공식 :** [https://opencv.org](https://opencv.org)
-* **OpenCV4.0 Document :** [https://docs.opencv.org/4.0.0/](https://docs.opencv.org/4.0.0/)
+* **OpenCV 공식 :** [https://opencv.org](https://opencv.org){:target="_blank"}
+* **OpenCV4.0 Document :** [https://docs.opencv.org/4.0.0/](https://docs.opencv.org/4.0.0/){:target="_blank"}
+* **OpenCVSharp :** [https://github.com/shimat/opencvsharp/releases](https://github.com/shimat/opencvsharp/releases){:target="_blank"}
 {% endcapture %}
 
 <div class="notice">
   {{ notice-2 | markdownify }}
 </div>
 
-그 외, 특히 OpenCvSharp sample 자료를 많이 참조 할 듯 합니다.
+OpenCvSharp sample 자료를 검토 할 듯 합니다.
 
 개발 내용 부분 포스트들은 개인적으로 기록을 남기기위한 초기의 취지도 그렇고, 사실 말주변도 별로 없고 해서 설명 부분은 거의 없을 거라 보여 집니다. ^^;
 
