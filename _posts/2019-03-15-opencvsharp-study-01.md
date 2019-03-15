@@ -39,7 +39,7 @@ OepnCV 관련 사이트는 아래와 같습니다.
   {{ notice-2 | markdownify }}
 </div>
 
-OpenCvSharp sample 자료를 검토 할 듯 합니다.
+OpenCvSharp sample 자료를 먼저 참조 할 듯 합니다.
 
 개발 내용 부분 포스트들은 개인적으로 기록을 남기기위한 초기의 취지도 그렇고, 사실 말주변도 별로 없고 해서 설명 부분은 거의 없을 거라 보여 집니다. ^^;
 
