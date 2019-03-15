@@ -12,7 +12,7 @@ tags:
 last_modified_at: 2019-03-15T10:21:00-00:00
 ---
 
-chapter 1. opencvsharp 설치 및 웹캠 로딩, 이미지 파일 로딩
+chapter 1. opencvsharp 설치 및 웹캠 로딩, 이미지 파일 로딩, 동영상 파일 로딩
 
 
 ## OpenCVShapr install - visual studio NuGet
@@ -105,7 +105,7 @@ pictureBoxIpl 이 추가 됩니다.
 * image 로딩 메뉴를 추가
 ![OpenCvSharp Install 5]({{ site.url }}{{ site.baseurl }}/assets/images/opencvsharp-005.png){: .align-center}
 
-* 이미지파일 로딩 내용
+* 이미지 파일 로딩 내용
 ```cs
     private void imageFileToolStripMenuItem_Click(object sender, EventArgs e)
     {
@@ -129,5 +129,43 @@ pictureBoxIpl 이 추가 됩니다.
         }
     }
 ```
+
+## Video file loading
+* 동영상 파일 로딩 내용
+```cs
+    private void videoFileToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            //open file dialog
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Video (*.avi; *.mp4; *.mpeg) |*.avi; *.mp4; *.mpeg |All files (*.*)|*.*||";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                capture = new VideoCapture(dlg.FileName);
+                int sleepTime = (int)Math.Round(1000 / capture.Fps);
+
+                frame = new Mat();
+
+                //when the movie playback reaches end, mat.data becomes NULL
+                while (true)
+                {
+                    capture.Read(frame);
+                    if (frame.Empty()) break;
+
+                    image = BitmapConverter.ToBitmap(frame);
+                    pictureBoxIpl1.Image = image;
+                    Cv2.WaitKey(sleepTime);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+    }
+```
+
 
 이상 기본 설치 및 로딩 관련 내용을 마침.
