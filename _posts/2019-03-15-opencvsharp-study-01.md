@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] OpenCV programing with C#"
+title: "[OpenCVSharp] 0. OpenCV programing with C#"
 header:
   overlay_color: "#333"
 categories:
@@ -21,7 +21,7 @@ OpenCV 공부 이야기...
 처음에는 Python으로 시작해볼까 싶었지만... 현재 주로 C#을 하고 있고, 기타 다른 프로그램들과의 연계성을 감안하여 C#으로 개발하고 싶어 자료를 좀 찾아보니... 
 OpenCV 래퍼인 EmguCV 와 OpenCVSharp이 있네요. 
 
-EmguCV는 라이센스 정책도 좀 그렇고... 기타 다른 경험자분들 의견등....을 감안 하여 OpenCVSharp으로 하기로 결정하였습니다.
+EmguCV는 라이센스 정책도 좀 그렇고... 기타 다른 경험자분들 의견등....을 감안 하여 OpenCVSharp이 적합한듯 합니다.
 
 OpenCV가 작년 말(2018-12-22) Version 4.0이 릴리즈 되었네요. 
 
