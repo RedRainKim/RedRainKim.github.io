@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] 2. Mat class..."
+title: "[OpenCVSharp] 2. Mat class"
 header:
   overlay_color: "#333"
 categories:
@@ -9,6 +9,8 @@ tags:
   - OpenCVSharp
   - Computer Vision
   - C# programing
+  - 영상처리
+  - 컴퓨터비젼  
 last_modified_at: 2019-03-18T16:54:00-00:00
 ---
 

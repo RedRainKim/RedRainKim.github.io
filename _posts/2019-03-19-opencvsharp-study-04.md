@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] 4. photo module methods..."
+title: "[OpenCVSharp] 4. photo module methods"
 header:
   overlay_color: "#333"
 categories:

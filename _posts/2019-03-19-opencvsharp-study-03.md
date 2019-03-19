@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] 3. Image split and merge..."
+title: "[OpenCVSharp] 3. Image split and merge"
 header:
   overlay_color: "#333"
 categories:
