@@ -9,6 +9,8 @@ tags:
   - OpenCVSharp
   - Computer Vision
   - C# programing
+  - 영상처리
+  - 컴퓨터비젼
 last_modified_at: 2019-03-19T09:58:00-00:00
 ---
 
