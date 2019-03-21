@@ -195,5 +195,84 @@ chapter 5. 그리기 관련 함수들...
 
 
 이상으로 간략히 그리기 함수를 알아보았습니다.
+마지막으로 글자 쓰기를 알아보겠습니다.
 
+
+## Drawing Text, 문자 쓰기
+
+문자를 쓰기 위해서는 Font를 사용합니다. 먼저 OpenCV에서 사용하는 Font를 알아보겠습니다. 
+기본적으로 HersheyFonts 가 있습니다. 종류는 아래와 같습니다.
+
+```cs
+public enum HersheyFonts
+{
+    HersheySimplex = 0,         //normal size sans-serif font        
+    HersheyPlain = 1,           //small size sans-serif font
+    HersheyDuplex = 2,          //normal size sans-serif font (more complex than HERSHEY_SIMPLEX)
+    HersheyComplex = 3,         //normal size serif font
+    HersheyTriplex = 4,         //normal size serif font (more complex than HERSHEY_COMPLEX)            
+    HersheyComplexSmall = 5,    //smaller version of HERSHEY_COMPLEX            
+    HersheyScriptSimplex = 6,   //hand-writing style font            
+    HersheyScriptComplex = 7,   //more complex variant of HERSHEY_SCRIPT_SIMPLEX            
+    Italic = 16                 //flag for italic font
+}
+```
+OpenCV에서 글자를 쓰기위해서는 PutText() 함수를 사용합니다. 함수 내용은 아래와 같습니다.
+![Drawing ellipse]({{ site.url }}{{ site.baseurl }}/assets/images/opencvsharp-study-05_9.png){: .align-center}
+
+
+
+예제 코드
+```cs
+//drawing text
+{
+    #region fonts
+    //public enum HersheyFonts
+    //{
+    //    HersheySimplex = 0,         //normal size sans-serif font        
+    //    HersheyPlain = 1,           //small size sans-serif font
+    //    HersheyDuplex = 2,          //normal size sans-serif font (more complex than HERSHEY_SIMPLEX)
+    //    HersheyComplex = 3,         //normal size serif font
+    //    HersheyTriplex = 4,         //normal size serif font (more complex than HERSHEY_COMPLEX)            
+    //    HersheyComplexSmall = 5,    //smaller version of HERSHEY_COMPLEX            
+    //    HersheyScriptSimplex = 6,   //hand-writing style font            
+    //    HersheyScriptComplex = 7,   //more complex variant of HERSHEY_SCRIPT_SIMPLEX            
+    //    Italic = 16                 //flag for italic font
+    //}
+    #endregion
+
+    Mat img = new Mat(500, 500, MatType.CV_8UC3);
+
+    // 텍스트, 위치(좌표), 글꼴, 크기, 색상, 두께(옵션), 종류(옵션)
+    img.PutText("OpenCV", (Point)new Point(50, 50), HersheyFonts.HersheySimplex, 0.5, Scalar.Red, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 100), HersheyFonts.HersheyPlain, 0.5, Scalar.Orange, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 150), HersheyFonts.HersheyDuplex, 0.5, Scalar.Green, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 200), HersheyFonts.HersheyComplex, 0.5, Scalar.Yellow, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 250), HersheyFonts.HersheyTriplex, 0.5, Scalar.White, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 300), HersheyFonts.HersheyComplexSmall, 0.5, Scalar.SkyBlue, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 350), HersheyFonts.HersheyScriptSimplex, 0.5, Scalar.SeaGreen, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(50, 400), HersheyFonts.HersheyScriptComplex, 0.5, Scalar.Pink, 1, LineTypes.AntiAlias);
+
+    img.PutText("OpenCV", (Point)new Point(300, 50), HersheyFonts.Italic | HersheyFonts.HersheySimplex, 0.5, Scalar.Red, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 100), HersheyFonts.Italic | HersheyFonts.HersheyPlain, 0.5, Scalar.Orange, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 150), HersheyFonts.Italic | HersheyFonts.HersheyDuplex, 0.5, Scalar.Green, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 200), HersheyFonts.Italic | HersheyFonts.HersheyComplex, 0.5, Scalar.Yellow, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 250), HersheyFonts.Italic | HersheyFonts.HersheyTriplex, 0.5, Scalar.White, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 300), HersheyFonts.Italic | HersheyFonts.HersheyComplexSmall, 0.5, Scalar.SkyBlue, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 350), HersheyFonts.Italic | HersheyFonts.HersheyScriptSimplex, 0.5, Scalar.SeaGreen, 1, LineTypes.AntiAlias);
+    img.PutText("OpenCV", (Point)new Point(300, 400), HersheyFonts.Italic | HersheyFonts.HersheyScriptComplex, 0.5, Scalar.Pink, 1, LineTypes.AntiAlias);
+
+
+    using (new Window("Draw Text", img))
+    {
+        Cv2.WaitKey();
+        Cv2.DestroyAllWindows();
+    }
+}
+```
+
+결과
+![Drawing ellipse]({{ site.url }}{{ site.baseurl }}/assets/images/opencvsharp-study-05_10.png){: .align-center}
+
+마지막으로 문자 그리기 까지 알아보았습니다. 
 
