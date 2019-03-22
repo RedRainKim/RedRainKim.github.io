@@ -93,7 +93,7 @@ Adaptive Histogram Equalization(AHE)을 사용하기 위해서 OpenCV의 CLAHE C
 주로 클래스 인자인 Tile size값과 Cliplimit 값을 지정하여 보정을 하게 됩니다.
 
 * Tile Size : 이웃 영역의 크기를 지정
-* Cliplimit : 히스토그램이 클리핑되는 값 (클립 한계 값)
+* Clip limit : 히스토그램이 클리핑되는 값 (클립 한계 값)
 
 
 아래 그림을 보면서 각 인자 변화에 따른 결과 차이를 이해 하시기 바랍니다.
