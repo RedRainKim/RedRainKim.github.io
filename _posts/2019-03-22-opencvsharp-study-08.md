@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] 8. Histogram Equalization (히스토그램 평준화)"
+title: "[OpenCVSharp] 8. Histogram Equalization"
 header:
   overlay_color: "#333"
 categories:

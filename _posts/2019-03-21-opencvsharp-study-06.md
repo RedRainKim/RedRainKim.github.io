@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] 6. Binarization, 영상 이진화"
+title: "[OpenCVSharp] 6. Binarization"
 header:
   overlay_color: "#333"
 categories:
