@@ -11,7 +11,7 @@ tags:
   - C# programing
   - 영상처리
   - 컴퓨터비젼
-  - Edge Detectio
+  - Edge Detection
   - 가장자리 검출
 last_modified_at: 2019-03-28T14:38:00-00:00
 ---
@@ -39,7 +39,7 @@ void cv::Sobel(
 	MatType ddepth,     //output image depth, see combinations; in the case of 8-bit input images it will result in truncated derivatives.
 	int xorder,         //order of the derivative x.
 	int yorder,         //order of the derivative y.
-	int ksize = 3,      //size of the extended Sobel kernel. It must be 1, 3, 5 ro 7.
+	int ksize = 3,      //size of the extended Sobel kernel. It must be 1, 3, 5 or 7.
 	double scale = 1,   //optional scale factor for the computed derivative values, by default, no scaling is applied
 	double delta = 0,   //optional delta value that is added to the results prior to storing them in det.
 	BorderTypes borderType = BorderTypes.Reflect101 //pixel extrapolation method
