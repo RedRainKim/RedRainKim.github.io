@@ -94,5 +94,5 @@ using (new Window("dst", WindowMode.AutoSize, dst))
     <figcaption>canny edge / contures drawing</figcaption>
 </figure>
 
-가장자리 포인트를 이용해 사각형을 그렸다. 앞으로는 객체 추적에 대해 확인 하는 중.
+가장자리 포인트를 이용해 사각형을 그렸다. 앞으로는 객체 추적에 대해 알아 보자.
 
