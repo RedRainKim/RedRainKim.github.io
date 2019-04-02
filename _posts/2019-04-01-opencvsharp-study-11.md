@@ -1,5 +1,5 @@
 ---
-title: "[OpenCVSharp] 11. Object drawing, 객체그리기"
+title: "[OpenCVSharp] 11. Object drawing"
 header:
   overlay_color: "#333"
 categories:
@@ -12,14 +12,16 @@ tags:
   - 영상처리
   - 컴퓨터비젼
   - Object tracking
-last_modified_at: 2019-03-29T15:38:00-00:00
+last_modified_at: 2019-04-01T15:38:00-00:00
 ---
 
-chapter 11. 이미지 그리기
+chapter 11. 객체 가장자리 사각형 그리기
 
 지난 시간 알아본 Find Contour에서 확인 된 객체를 인식 용이토록 사각형으로 그리도록 하자.
 
 FindContours()함수까지 진행 사항은 동일하고, 이후 DrawContours() 함수 대신에 반복문을 사용해 그린다.
+
+## 사각형 그리기
 
 ```cs
 //image load 먼저 한 후,
@@ -58,7 +60,7 @@ var rectList = new List<Rect>();
 foreach (var c in contours)
 {
     //skip too small obj
-    //if (c.Length > 20)
+    if (c.Length > 20)
         rectList.Add(Cv2.BoundingRect(c));
 }
 
@@ -94,5 +96,8 @@ using (new Window("dst", WindowMode.AutoSize, dst))
     <figcaption>canny edge / contures drawing</figcaption>
 </figure>
 
-가장자리 포인트를 이용해 사각형을 그렸다. 앞으로는 객체 인식 하는 다른 방법에 대해 알아 보자.
+
+## 원 그리기
+
+이건 나중에...
 
