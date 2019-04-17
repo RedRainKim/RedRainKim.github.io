@@ -205,7 +205,7 @@ private void btnMRead_Click(object sender, EventArgs e)
 PLC data write 부분은 개별 주소로 쓸 수도 있고, Structure로 접근 가능합니다.
 아래 소스는 Structure 변수를 전달받아 PLC write 하는 내용입니다. 
 
-'''cs
+```cs
 private static void DataSendtoPLC(LastBilletTempData src)
 {
     try
@@ -246,7 +246,7 @@ private static void DataSendtoPLC(LastBilletTempData src)
         log.Error(ex.Message);
     }
 }
-'''
+```
 
 
 ## 후기
