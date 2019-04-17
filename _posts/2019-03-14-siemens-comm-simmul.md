@@ -202,8 +202,56 @@ private void btnMRead_Click(object sender, EventArgs e)
 
 ### PLC Value 쓰기
 
-쓰는 기능은 필요치 않아서... 없습니다. 쿨럭.
+PLC data write 부분은 개별 주소로 쓸 수도 있고, Structure로 접근 가능합니다.
+아래 소스는 Structure 변수를 전달받아 PLC write 하는 내용입니다. 
 
-읽는 포인트가 많지 않다면 1초 주기로 계속 돌려도 서버 퍼포먼스나 처리 속도에서 전혀 문제가 없는 듯 합니다.
+'''cs
+private static void DataSendtoPLC(LastBilletTempData src)
+{
+    try
+    {
+        using (Plc plc = new Plc(CpuType.S7300, plcip, 0, 3))
+        {
+            if (plc.IsAvailable)
+            {
+                plc.Open();
+                if (plc.IsConnected)
+                {
+                    //data write by single address
+                    //plc.Write("DB224.DBD20", src.charge);     //charge temperature    : DB224.DBD20
+                    //plc.Write("DB224.DBD22", src.avg);        //avg temperature       : DB224.DBD28
+                    //plc.Write("DB224.DBD24", src.top);        //top temperature       : DB224.DBD22
+                    //plc.Write("DB224.DBD26", src.bot);        //bot temperature       : DB224.DBD24
+                    //plc.Write("DB224.DBD28", src.core);       //core temperature      : DB224.DBD26
+                    //plc.Write("DB224.DBD30", src.target);     //target temperature    : DB224.DBD30
+
+                    //data write by structure
+                    plc.WriteStruct(structValue: src, db: 224, startByteAdr: 20);
+                    log.Debug("PLC data sent : avg({0}) / target({1})", src.avg.ToString(), src.target.ToString());
+                }
+                else
+                {
+                    log.Error("PLC is Available but NOT connected !!!");
+                }
+            }
+            else
+            {
+                log.Error("PLC is NOT Available !!!");
+            }
+            plc.Close();
+        }
+    }
+    catch (Exception ex)
+    {
+        log.Error(ex.Message);
+    }
+}
+'''
+
+
+## 후기
+
+읽고 쓰는 포인트가 많지 않다면 1초 주기로 계속 돌려도 서버 퍼포먼스나 처리 속도에서 전혀 문제가 없는 듯 합니다.
+나중에 대량으로 데이터를 처리 하게 되면 다시 한번 검증 해봐야 할 것 같습니다.
 
 문의 사항 있으시면, 댓글 남겨주십시요.
