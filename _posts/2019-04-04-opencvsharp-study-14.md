@@ -18,7 +18,7 @@ last_modified_at: 2019-04-02T17:38:00-00:00
 chapter 14. 탬플릿 객체 감지
 
 ![Template]({{ site.url }}{{ site.baseurl }}/assets/images/puzzle_small.jpg){: .align-center}
-이번에는 저정된 탬플릿을 이용한 객체 감지에 대해 알아보자.
+이번에는 지정된 탬플릿을 이용한 객체 감지에 대해 알아보자.
 
 OpenCV MatchTemplate()함수와 MinMaxLoc()함수를 사용한다.
 
